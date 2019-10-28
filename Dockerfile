@@ -20,6 +20,7 @@ RUN export PATH="/usr/local/sbt/bin:$PATH" \
     && cd "/tmp" \
     && tar xzf "sbt-${SBT_VERSION}.tgz" \
     && mv "/tmp/sbt" "/usr/local" \
+    && ln -s "/usr/local/sbt/bin/sbt" "/usr/bin/" \
     && sbt sbtVersion
 
 # Clean up
